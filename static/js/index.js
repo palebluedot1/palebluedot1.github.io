@@ -1,16 +1,4 @@
 window.onload = function() {
-  var slide = document.querySelectorAll(".slide"),
-      winH = window.innerHeight,
-      totalDist = (slide.length-1) * winH;
-      start = 0,
-      end = 0,
-      index = 0,
-      dist = 0,
-      startY = 0,
-      endY = 0;
-  slide.forEach(function(el) {
-    el.style.height = winH + 'px';
-  });
   var EventUtil = {
     addHandler: function(el, type, handler) {
       if(el.addEventListener) {
@@ -29,6 +17,25 @@ window.onload = function() {
     },
     ua: navigator.userAgent
   };
+
+  var slide = document.querySelectorAll(".slide"),
+      winH = window.innerHeight,
+      totalDist = (slide.length-1) * winH;
+      start = 0,
+      end = 0,
+      index = 0,
+      dist = 0,
+      startY = 0,
+      endY = 0;
+  slide.forEach(function(el) {
+    el.style.height = winH + 'px';
+  });
+  window.onresize = function() {
+    winH = window.innerHeight;
+    slide.forEach(function(el) {
+      el.style.height = winH + 'px';
+    });
+  }
   function movePages(ev) {
     var event = EventUtil.getEvent(ev),
         wheelDelta = EventUtil.getWheelDelta(event),
