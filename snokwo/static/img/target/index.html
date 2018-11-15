@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+    body, div {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      width: 300px;
+      height: 10px;
+      margin-top: 100px;
+      background-color: #233;
+      position: relative;
+    }
+    .move {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"><span class="move"></span></div>
+  <script>
+    window.onload = function() {
+      var box = document.getElementsByClassName('box')[0],
+          move = document.querySelector('.move'),
+          flag = false;
+      box.addEventListener("touchstart", function(ev) {
+        ev.stopPropagation();
+        console.log('touchstart');
+        flag = true;
+      });
+      box.addEventListener("touchmove", function(ev) {
+        console.log(ev.touches[0].pageX);
+        if(flag) {
+          var dist = ev.touches[0].pageX || ev.touches[0].clientX;
+              // boxLeft = getPosition(box);
+          console.log(box);
+        }
+      });
+      function getPosition(el) {
+        var actualLeft = el.offsetLeft,
+            current = el.offsetParent;
+        while (current !== null) {
+          actualLeft += current.offsetLeft;
+          current = current.offsetLeft;
+        }
+        return actualLeft;
+        //console.log(current);
+      }
+      getPosition(move);
+    }
+
+  </script>
+</body>
+</html>

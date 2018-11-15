@@ -1,0 +1,142 @@
+.mt70 {
+  margin-top: 70px;
+}
+.main-wrap {
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.link-product{
+  width: 650px;
+  height: 800px;
+  display: block;
+}
+.login-box {
+  margin-top: 150px;
+  padding: 30px;
+  border-radius: 5px;
+  color: #7a80a2;
+  background-color: #292e42;
+  position: relative;
+  z-index: 10;
+  .content {
+    width: 340px;
+  }
+  .form-input, .u-submit {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    border: 0;
+    font-size: 14px;
+  }
+  .form-input {
+    text-indent: 10px;
+    background-color: #202539;
+    display: block;
+    border: 1px solid #3a4056;
+    &:focus {
+      border: 1px solid #2666b5;
+    }
+    &:focus ~.info {
+      visibility: visible;
+    }
+  }
+  .input-box.error {
+    color: #f44848;
+    input {
+      border: 1px solid #f44848;
+    }
+    .info {
+      visibility: visible;
+    }
+  }
+  .input-box.success .info{
+    visibility: hidden;
+  }
+  .info {
+    width: 100%;
+    height: 20px;
+    padding: 0 10px;
+  }
+  .tabs {
+    width: 100%;
+    height: 36px;
+    border-bottom: 1px solid #3f4760;
+  }
+  .login-content {
+    margin-top: 30px;
+  }
+  span.active {
+    color: #b9c0ef;
+    border-bottom: 2px solid #b9c0ef;
+  }
+  .item {
+    font-size: 16px;
+    margin-right: 50px;
+    color: #7a80a2;
+    height: 38px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .u-submit {
+    color: white;
+    background-color: #eb6100;
+  }
+  .u-submit.disabled {
+    background-color: #bfbfbf;
+    cursor: no-drop;
+  }
+  .box-footer {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .other-info {
+    margin-top: 10px;
+    .change-psd, .link-sign {
+      color: #eb6100;
+      font-size: 14px;
+      text-align: center;
+      padding-left: 5px;
+      margin-right: 5px;
+    }
+    .change-psd {
+      border-right: 1px solid #eb6100;
+      padding-right: 10px;
+    }
+  }
+  h4 {
+    color: #7a80a2;
+  }
+  .oauth {
+    margin-right: 20px;
+    display: inline-block;
+    color: #6d7391;
+    .fa {
+      width: 30px;
+      height: 30px;
+      font-size: 24px;
+      border-radius: 50%;
+      background-color: #3d4152;
+      display: inline-block;
+    }
+  }
+  .input-box {
+    .phone-psd {
+      width: 210px;
+      float: left;
+    }
+  }
+  .code {
+    width: 100px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: white;
+    background-color: #eb6100;
+    &:hover {
+      background-color: orange;
+    }
+  }
+}
